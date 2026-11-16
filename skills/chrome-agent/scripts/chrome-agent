@@ -1,0 +1,48 @@
+#!/bin/zsh
+# Abre um Chrome visível, controlável por CDP, com uma cópia do seu perfil real (logins inclusos).
+# O Chrome 136+ recusa --remote-debugging-port no perfil padrão; por isso a cópia em ~/.chrome-agent.
+# Uso: chrome-agent [--sync] [--perfil "Profile 1"] [--porta 9222]
+set -e
+SRC="$HOME/Library/Application Support/Google/Chrome"
+DST="$HOME/.chrome-agent"
+PORT=9222
+PERFIL="Default"
+SYNC=0
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --sync) SYNC=1 ;;
+    --perfil) PERFIL="$2"; shift ;;
+    --porta) PORT="$2"; shift ;;
+  esac
+  shift
+done
+
+if curl -s --max-time 1 "http://127.0.0.1:$PORT/json/version" >/dev/null; then
+  echo "já rodando em :$PORT"; exit 0
+fi
+
+if [[ ! -d "$SRC/$PERFIL" ]]; then
+  echo "perfil \"$PERFIL\" não encontrado em $SRC"; ls "$SRC" | grep -E '^(Default|Profile )'; exit 1
+fi
+
+if [[ ! -d "$DST/$PERFIL" || $SYNC == 1 ]]; then
+  echo "copiando o perfil \"$PERFIL\" (logins e estado, sem caches)..."
+  mkdir -p "$DST"
+  rsync -a --delete \
+    --exclude 'Cache' --exclude 'Code Cache' --exclude 'GPUCache' \
+    --exclude 'DawnCache' --exclude 'DawnGraphiteCache' --exclude 'DawnWebGPUCache' \
+    --exclude 'Service Worker/CacheStorage' --exclude 'Crashpad' \
+    --exclude 'component_crx_cache' --exclude 'optimization_guide_model_store' \
+    --exclude 'Safe Browsing' --exclude '*.pma' \
+    "$SRC/$PERFIL" "$DST/"
+  cp "$SRC/Local State" "$DST/"
+fi
+
+open -na "Google Chrome" --args \
+  --remote-debugging-port=$PORT \
+  --user-data-dir="$DST" \
+  --profile-directory="$PERFIL" \
+  --no-first-run --no-default-browser-check
+
+until curl -s --max-time 1 "http://127.0.0.1:$PORT/json/version" >/dev/null; do sleep 0.5; done
+echo "pronto: CDP em :$PORT (conecte com: agent-browser connect $PORT)"
