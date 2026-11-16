@@ -5,10 +5,10 @@ pesquisa, roteiro, coleta de fotos reais, montagem em código no Remotion e acab
 
 ## Como usar (o jeito fácil)
 
-1. Baixe este repositório: `git clone https://github.com/mackswendhell/documentario-com-claude.git`
-   (ou Code → Download ZIP aqui no GitHub e descompacte).
-2. No app do Claude, abra a aba **Code** e escolha a pasta `documentario-com-claude`.
-3. Escolha o modelo **Fable 5.2** com esforço **Alto** e escreva: **vamos começar**.
+1. No app do Claude, abra a aba **Code** numa pasta vazia e escolha o modelo **Fable 5.2** com esforço **Alto**.
+2. Cole esta mensagem:
+
+   > Clone https://github.com/mackswendhell/documentario-com-claude nesta pasta, leia o CLAUDE.md e vamos começar.
 
 O Claude lê o [CLAUDE.md](CLAUDE.md), confere o que falta instalar, instala com a sua permissão e conduz cada etapa
 até o documentário pronto. Os prompts de cada passo estão em [PIPELINE.md](PIPELINE.md).
