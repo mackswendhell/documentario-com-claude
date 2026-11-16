@@ -3,7 +3,15 @@
 Skills e pipeline para fazer um minidocumentário com cara de Netflix dentro do Claude Code, com o Claude Fable 5.2:
 pesquisa, roteiro, coleta de fotos reais, montagem em código no Remotion e acabamento com a Higgsfield.
 
-O passo a passo com os prompts está em [PIPELINE.md](PIPELINE.md).
+## Como usar (o jeito fácil)
+
+1. Baixe este repositório: `git clone https://github.com/mackswendhell/documentario-com-claude.git`
+   (ou Code → Download ZIP aqui no GitHub e descompacte).
+2. No app do Claude, abra a aba **Code** e escolha a pasta `documentario-com-claude`.
+3. Escolha o modelo **Fable 5.2** com esforço **Alto** e escreva: **vamos começar**.
+
+O Claude lê o [CLAUDE.md](CLAUDE.md), confere o que falta instalar, instala com a sua permissão e conduz cada etapa
+até o documentário pronto. Os prompts de cada passo estão em [PIPELINE.md](PIPELINE.md).
 
 ## As cinco peças
 
@@ -15,7 +23,7 @@ O passo a passo com os prompts está em [PIPELINE.md](PIPELINE.md).
 | Remotion | transforma o Claude num editor de vídeo, com um Studio próprio | https://github.com/remotion-dev/skills |
 | Higgsfield MCP | acabamento: voz do narrador e peças de época | https://higgsfield.ai/mcp |
 
-## Instalação
+## Instalação manual (se preferir fazer sozinho)
 
 ```bash
 # Watch (dentro do Claude Code)
