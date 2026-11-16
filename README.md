@@ -3,6 +3,8 @@
 Skills e pipeline para fazer um minidocumentário com cara de Netflix dentro do Claude Code, com o Claude Fable 5.2:
 pesquisa, roteiro, coleta de fotos reais, montagem em código no Remotion e acabamento com a Higgsfield.
 
+O passo a passo com os prompts está em [PIPELINE.md](PIPELINE.md).
+
 ## As cinco peças
 
 | Peça | Para quê | Onde pegar |
