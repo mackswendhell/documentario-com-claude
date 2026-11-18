@@ -55,6 +55,18 @@ me perguntar. Antes do render final, confira quadros de cada cena e corrija o qu
 sobreposto ou travando.
 ```
 
+## 3-B. Montagem no estilo dossiê VOX (alternativa ao passo 3)
+
+```text
+Monte o documentário no estilo dossiê VOX usando o template da skill estilo-vox: fundo de papel envelhecido, cada
+imagem entra como foto impressa presa com fita e pino, cada ideia ganha uma manchete em papel rasgado com etiqueta
+vermelha, o que é prova entra em cena escura com faixa amarela de REGISTRO e carimbo. Uma ideia por cena, manchete
+de até 4 palavras, a imagem de cada cena tem que ser a do momento exato da narração e nenhuma imagem pode se repetir
+entre cenas. Sem emojis. Antes de renderizar, tire um quadro a cada 7 segundos e confira imagem x frase.
+```
+
+O SKILL.md da skill traz as regras de leitura, a tabela de cenas e as armadilhas conhecidas.
+
 ## 4. Acabamento com a Higgsfield (MCP)
 
 Conecte antes: Personalização → Conectores → Adicionar conector personalizado → `https://mcp.higgsfield.ai/mcp`.

@@ -13,6 +13,16 @@ pesquisa, roteiro, coleta de fotos reais, montagem em código no Remotion e acab
 O Claude lê o [CLAUDE.md](CLAUDE.md), confere o que falta instalar, instala com a sua permissão e conduz cada etapa
 até o documentário pronto. Os prompts de cada passo estão em [PIPELINE.md](PIPELINE.md).
 
+## Dois estilos de montagem
+
+O pipeline abaixo monta o vídeo como **um movimento contínuo de câmera sobre uma mesa de arquivo**. Se você quiser o
+outro acabamento — o **dossiê VOX**, com fotos presas com fita, manchetes em papel rasgado, carimbos e faixas de
+"registro" — use o template pronto em [skills/estilo-vox](skills/estilo-vox):
+
+> Copie skills/estilo-vox/remotion para a pasta do projeto, leia o SKILL.md e monte meu documentário nesse estilo.
+
+O template já vem com a composição, os componentes, os scripts de preparo das imagens e a tabela de cenas.
+
 ## As cinco peças
 
 | Peça | Para quê | Onde pegar |

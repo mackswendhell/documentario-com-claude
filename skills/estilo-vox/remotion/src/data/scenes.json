@@ -1,0 +1,55 @@
+[
+ {
+  "start": 0.0,
+  "end": 9.0,
+  "kind": "abertura",
+  "kicker": "ABERTURA",
+  "head": "O TÍTULO QUE ABRE O FILME",
+  "line": "a linha fina que explica a promessa",
+  "tone": "sepia",
+  "a": "i00",
+  "stamp": "ARQUIVO"
+ },
+ {
+  "start": 9.0,
+  "end": 21.0,
+  "kind": "foto",
+  "kicker": "O FATO",
+  "head": "O QUE ACONTECEU",
+  "line": "uma ideia por cena, nunca duas",
+  "tone": "sepia",
+  "a": "i01"
+ },
+ {
+  "start": 21.0,
+  "end": 32.0,
+  "kind": "documento",
+  "kicker": "O FATO",
+  "head": "O DOCUMENTO",
+  "line": "papel oficial entra como documento",
+  "tone": "sepia",
+  "a": "i02",
+  "note": "aqui vai uma anotação à mão"
+ },
+ {
+  "start": 32.0,
+  "end": 44.0,
+  "kind": "evidencia",
+  "kicker": "A VIRADA",
+  "head": "O QUE NÃO FECHA",
+  "line": "cena escura, foto em p&b, faixa amarela",
+  "tone": "bw",
+  "a": "i03",
+  "stamp": "AMEAÇA"
+ },
+ {
+  "start": 44.0,
+  "end": 56.0,
+  "kind": "fechamento",
+  "kicker": "O DESFECHO",
+  "head": "A FRASE FINAL",
+  "line": "o fecho antes do cartão final",
+  "tone": "bw",
+  "a": "i04"
+ }
+]
