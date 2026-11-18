@@ -1,0 +1,16 @@
+node_modules/
+out/
+.DS_Store
+
+# mídia pesada dos projetos (fica só na máquina de quem monta)
+skills/estilo-vox/remotion/public/img/
+skills/estilo-vox/remotion/public/imgp/
+skills/estilo-vox/remotion/public/vox/
+skills/estilo-vox/remotion/public/voxp/
+skills/estilo-vox/remotion/public/fx/
+skills/estilo-vox/remotion/public/audio/
+projetos/*/vox/public/
+projetos/*/out/
+*.mp4
+*.mp3
+*.wav
